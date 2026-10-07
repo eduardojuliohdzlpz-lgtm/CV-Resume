@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Perfil profesional de Eduardo Hernandez: Business Analyst, experiencia, habilidades y formación.">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+<title>Eduardo Hernandez · Business Analyst</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky bar, hero with a live "query" card, then ledger-style sections (label column left, content right). Dark-first. */
+:root{
+  color-scheme:dark;
+  --bg:#0a1320; --surface:#101c2d; --line:#20324a; --fg:#e7edf5; --muted:#93a4ba;
+  --accent:#4fc3c8; --accent-ink:#06262a; --warm:#f0b765;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#f3f6f9; --surface:#ffffff; --line:#d5dee8; --fg:#0f1c2c; --muted:#55657a;
+  --accent:#0b7f86; --accent-ink:#ffffff; --warm:#a7620a;
+}}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f3f6f9; --surface:#ffffff; --line:#d5dee8; --fg:#0f1c2c; --muted:#55657a;
+  --accent:#0b7f86; --accent-ink:#ffffff; --warm:#a7620a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:20px}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;white-space:nowrap}
+.brand b{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-size:.9rem}
+.bar nav{display:flex;gap:20px;margin-left:auto;overflow-x:auto;min-width:0}
+.bar nav a{text-decoration:none;color:var(--muted);font-size:.92rem;white-space:nowrap;padding-block:6px}
+.bar nav a:hover{color:var(--fg)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.lang button{font:500 .78rem var(--mono);background:none;border:0;color:var(--muted);padding:7px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+@media (max-width:720px){.brand span{display:none}.bar nav{gap:14px}}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding-block:64px 56px}
+.hero h1{font:700 clamp(2.6rem,7vw,4.6rem)/.98 var(--display);letter-spacing:-.02em;margin:14px 0 18px;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.role{font:500 1.15rem var(--body);color:var(--warm);margin:0 0 16px}
+.hero p.lead{max-width:60ch;color:var(--muted);margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 .95rem var(--body);padding:11px 18px;border-radius:8px;border:1px solid var(--line);background:none;color:var(--fg);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{border-color:var(--accent)}
+.facts{display:flex;flex-wrap:wrap;gap:14px 36px;margin:36px 0 0;padding:0}
+.facts div{display:flex;flex-direction:column;gap:2px}
+.facts dd{margin:0;font-weight:500}
+
+.query{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-family:var(--mono);font-size:.84rem;min-width:0}
+.query .top{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.74rem}
+.query pre{margin:0;padding:16px;white-space:pre-wrap;line-height:1.7;font:inherit}
+.query pre i{font-style:normal;color:var(--accent)}
+.query .rows{border-top:1px solid var(--line)}
+.query .row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.query .row strong{font-family:var(--body);font-weight:600;font-size:.95rem}
+.query .row span{color:var(--muted);font-size:.76rem}
+.query .row span.when{color:var(--warm);text-align:right}
+.query .foot{padding:9px 16px;color:var(--muted);font-size:.74rem}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding-block:44px 40px}}
+
+section.block{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px 40px;padding-block:52px;border-top:1px solid var(--line)}
+.block > header h2{font:700 1.7rem/1.1 var(--display);margin:6px 0 8px;text-wrap:balance}
+.block > header p{margin:0;color:var(--muted);font-size:.92rem}
+@media (max-width:860px){section.block{grid-template-columns:1fr;padding-block:40px}}
+
+.jobs{display:flex;flex-direction:column;gap:36px}
+.job{border-left:2px solid var(--line);padding-left:22px;position:relative}
+.job::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{font:700 1.3rem/1.2 var(--display);margin:4px 0 2px}
+.job .co{color:var(--warm);font-weight:500;margin:0 0 12px}
+.job ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;max-width:68ch}
+.job li::marker{color:var(--accent)}
+
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px 32px}
+.groups h3{font:600 1rem var(--body);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.groups h3 small{font:400 .74rem var(--mono);color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{font-size:.88rem;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.93rem}
+
+.edu{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.edu h3{font:700 1.35rem/1.2 var(--display);margin:6px 0 4px}
+.edu p{margin:0;color:var(--muted)}
+.langs{display:flex;flex-wrap:wrap;gap:12px 40px;margin:24px 0 0;padding:0}
+.langs div{display:flex;flex-direction:column}
+.langs dd{margin:0;font-weight:500}
+
+.contact{display:flex;flex-direction:column;gap:14px}
+.line{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;padding:16px 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.line .val{font:500 1.05rem var(--body);user-select:all;overflow-wrap:anywhere;min-width:0}
+.line > div{display:flex;flex-direction:column;gap:2px;min-width:0}
+footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#profile"><b>EH</b><span>Eduardo Hernandez</span></a>
+  <nav id="nav" aria-label="Secciones"></nav>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button type="button" id="lang-es" data-lang="es">ES</button>
+    <button type="button" id="lang-en" data-lang="en">EN</button>
+  </div>
+</div></header>
+
+<main class="wrap" id="main"></main>
+<div class="wrap"><footer id="foot"></footer></div>
+
+<script>
+const EMAIL="eduardojuliohdzlpz@gmail.com", PHONE="+1 (829) 935-1102";
+const C={
+ nav:{es:["Perfil","Experiencia","Habilidades","Formación","Certificaciones","Contacto"],en:["Profile","Experience","Skills","Education","Certifications","Contact"]},
+ ids:["profile","experience","skills","education","certs","contact"],
+ eyebrow:{es:"Perfil profesional",en:"Professional profile"},
+ role:{es:"Business Analyst · Ingeniería de Sistemas",en:"Business Analyst · Systems Engineering"},
+ lead:{es:"Analista de negocios que conecta las necesidades empresariales con la tecnología para entregar soluciones de software de alta calidad. Experiencia en análisis de requisitos, metodologías ágiles, facilitación de Scrum y QA, y antes como consultor ERP en entornos SAP Business One con SAP HANA y SQL Server.",
+       en:"Business Analyst who bridges business needs and technology to deliver high-quality software solutions. Experienced in requirements analysis, Agile methodologies, Scrum facilitation and QA, and previously an ERP consultant in SAP Business One environments with SAP HANA and SQL Server."},
+ cta1:{es:"Ver experiencia",en:"See experience"}, cta2:{es:"Contacto",en:"Contact"},
+ facts:{es:[["Ubicación","Santo Domingo, República Dominicana"],["Idiomas","Español nativo · Inglés intermedio"],["Enfoque","Requerimientos, datos y ERP"]],
+        en:[["Location","Santo Domingo, Dominican Republic"],["Languages","Native Spanish · Intermediate English"],["Focus","Requirements, data and ERP"]]},
+ q:{es:["consulta.sql","SELECT","cargo, empresa, periodo","FROM","experiencia","ORDER BY","inicio","DESC","2 filas devueltas"],
+    en:["query.sql","SELECT","role, company, period","FROM","experience","ORDER BY","start_date","DESC","2 rows returned"]},
+ expH:{es:["Trayectoria","Experiencia laboral","Análisis de negocio y consultoría ERP."],en:["Career","Work experience","Business analysis and ERP consulting."]},
+ jobs:[
+  {t:"Business Analyst",c:"SSSPL Caribe",d:{es:"Mar 2026 — Ago 2026",en:"Mar 2026 — Aug 2026"},
+   b:{es:["Analicé requerimientos funcionales y técnicos para optimizar procesos empresariales y mejorar la eficiencia operativa.","Coordiné iniciativas bajo metodologías ágiles Scrum, facilitando la comunicación entre equipos técnicos y stakeholders.","Transformé necesidades de negocio en soluciones tecnológicas orientadas a datos y automatización de procesos.","Documenté flujos de sistemas y procesos críticos para mejorar la trazabilidad y reducir inconsistencias operativas.","Participé en análisis de información y validación de datos para soporte de decisiones estratégicas."],
+      en:["Analyzed functional and technical requirements to optimize business processes and improve operational efficiency.","Coordinated initiatives using Agile Scrum methodologies, facilitating communication between technical teams and stakeholders.","Translated business needs into technology solutions focused on data and process automation.","Documented system workflows and critical processes to improve traceability and reduce operational inconsistencies.","Participated in data analysis and validation to support strategic decision-making."]}},
+  {t:"SAP Business One Jr. Consultant",c:"DTS Higher Results",d:{es:"Ago 2023 — Feb 2026",en:"Aug 2023 — Feb 2026"},
+   b:{es:["Administré y optimicé bases de datos en SQL Server y SAP HANA para mejorar el rendimiento y la disponibilidad de la información.","Diseñé reportes dinámicos y dashboards con SAP Crystal Reports y herramientas de análisis de datos.","Procesé y analicé grandes volúmenes de información empresarial para identificar tendencias y apoyar decisiones operativas.","Implementé soluciones ERP en SAP Business One, contribuyendo a la automatización de procesos administrativos.","Realicé limpieza, validación y mantenimiento de datos críticos para garantizar la integridad y precisión de la información.","Brindé soporte técnico y consultoría funcional a usuarios finales, mejorando tiempos de respuesta y resolución de incidencias."],
+      en:["Managed and optimized SQL Server and SAP HANA databases to improve performance and data availability.","Designed dynamic reports and dashboards using SAP Crystal Reports and data analysis tools.","Processed and analyzed large volumes of business data to identify trends and support operational decision-making.","Implemented SAP Business One ERP solutions, contributing to the automation of administrative processes.","Performed data cleansing, validation and maintenance to ensure data integrity and accuracy.","Provided technical support and functional consulting to end users, improving response times and incident resolution."]}}
+ ],
+ skH:{es:["Herramientas","Habilidades técnicas","Datos, bases de datos y sistemas empresariales."],en:["Toolkit","Technical skills","Data, databases and business systems."]},
+ skills:[
+  {h:{es:"Análisis y manejo de datos",en:"Data analysis and management"},i:{es:["Power BI","SAS Viya","SAP Crystal Reports","Visualización de datos","Procesamiento y limpieza de datos","Interpretación de datos","Inteligencia de negocios (BI)"],en:["Power BI","SAS Viya","SAP Crystal Reports","Data visualization","Data processing and cleaning","Data interpretation","Business Intelligence (BI)"]}},
+  {h:{es:"Bases de datos",en:"Databases"},i:{es:["SQL Server","SAP HANA","MongoDB","MySQL"],en:["SQL Server","SAP HANA","MongoDB","MySQL"]}},
+  {h:{es:"Sistemas y herramientas",en:"Systems and tools"},i:{es:["SAP Business One","Scrum","Jira","Análisis de sistemas","Gestión de requerimientos"],en:["SAP Business One","Scrum","Jira","Systems analysis","Requirements management"]}}
+ ],
+ edH:{es:["Estudios","Formación e idiomas",""],en:["Studies","Education and languages",""]},
+ edu:{d:{es:"Agosto 2021 — Enero 2027",en:"August 2021 — January 2027"},t:{es:"Ingeniería de Sistemas",en:"Systems Engineering"},s:"Instituto Tecnológico de Santo Domingo (INTEC)",n:{es:"Concentración en Gestión Financiera y Sistemas ERP/SAP",en:"Concentration in Financial Management and ERP/SAP Systems"}},
+ langs:{es:[["Español","Nativo"],["Inglés","Intermedio"]],en:[["Spanish","Native"],["English","Intermediate"]]},
+ ceH:{es:["Aprendizaje continuo","Certificaciones y cursos","16 formaciones, agrupadas por institución."],en:["Continuous learning","Certifications and courses","16 courses, grouped by institution."]},
+ certs:[
+  {h:"INFOTEP",i:{es:["Asistente de electrónica","Electrónica de mantenimiento industrial","Asistente de contabilidad","Ventas internas de productos y servicios","Especialista en comercio electrónico","Emprendedor de PYMES","Usuario de ofimática e Internet","Usuario de informática aplicada","Diseñador web (HTML, CSS y JavaScript)"],en:["Electronics Assistant","Industrial Maintenance Electronics","Accounting Assistant","Internal Sales of Products and Services","E-commerce Specialist","SME Entrepreneur","Office Software and Internet User","Applied Computing User","Web Designer (HTML, CSS and JavaScript)"]}},
+  {h:"Udemy",i:{es:["MongoDB: De principiante a avanzado","Gestión de bases de datos con Microsoft SQL Server","MySQL: De principiante a avanzado"],en:["MongoDB: From Beginner to Advanced","Microsoft SQL Server Database Management","MySQL: From Beginner to Advanced"]}},
+  {h:"Alura Latam",i:{es:["Capacitación en agilidad empresarial (G4)","Capacitación en programación para principiantes (G4)","Capacitación en desarrollo personal (G4)"],en:["Business Agility Training (G4)","Programming for Beginners Training (G4)","Personal Development Training (G4)"]}},
+  {h:"SAS",i:{es:["Especialización en minería de datos e inteligencia empresarial (Business Intelligence)"],en:["Specialization in Data Mining and Business Intelligence"]}}
+ ],
+ coH:{es:["Contacto","Conectemos.","Para oportunidades de análisis de negocio, datos y proyectos ERP."],en:["Contact","Let's connect.","For business analysis, data and ERP opportunities."]},
+ co:{es:["Correo","Teléfono","Copiar","Copiado"],en:["Email","Phone","Copy","Copied"]},
+ foot:{es:"Eduardo Hernandez · Perfil profesional. Información basada en mi CV.",en:"Eduardo Hernandez · Professional profile. Information based on my résumé."}
+};
+let L="es";
+try{const s=localStorage.getItem("cv-lang");if(s==="en"||s==="es")L=s}catch(e){}
+const head=(h)=>`<header><span class="mono">${h[0]}</span><h2>${h[1]}</h2>${h[2]?`<p>${h[2]}</p>`:""}</header>`;
+function render(){
+  const g=o=>o[L];
+  document.documentElement.lang=L;
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===L));
+  document.getElementById("nav").innerHTML=g(C.nav).map((n,i)=>`<a href="#${C.ids[i]}">${n}</a>`).join("");
+  const q=g(C.q);
+  document.getElementById("main").innerHTML=`
+  <section class="hero" id="profile">
+    <div>
+      <span class="mono">${g(C.eyebrow)}</span>
+      <h1>Eduardo <em>Hernandez.</em></h1>
+      <p class="role">${g(C.role)}</p>
+      <p class="lead">${g(C.lead)}</p>
+      <div class="cta"><a class="btn primary" href="#experience">${g(C.cta1)} ↓</a><a class="btn" href="#contact">${g(C.cta2)}</a></div>
+      <dl class="facts">${g(C.facts).map(f=>`<div><dt class="mono">${f[0]}</dt><dd>${f[1]}</dd></div>`).join("")}</dl>
+    </div>
+    <div class="query" aria-label="${q[0]}">
+      <div class="top"><span>${q[0]}</span><span>SAP HANA · SQL Server</span></div>
+      <pre><i>${q[1]}</i> ${q[2]}
+<i>${q[3]}</i> ${q[4]}
+<i>${q[5]}</i> ${q[6]} <i>${q[7]}</i>;</pre>
+      <div class="rows">${C.jobs.map(j=>`<div class="row"><strong>${j.t}</strong><span class="when">${g(j.d)}</span><span>${j.c}</span></div>`).join("")}</div>
+      <div class="foot">${q[8]}</div>
+    </div>
+  </section>
+  <section class="block" id="experience">${head(g(C.expH))}
+    <div class="jobs">${C.jobs.map(j=>`<article class="job"><span class="mono">${g(j.d)}</span><h3>${j.t}</h3><p class="co">${j.c}</p><ul>${g(j.b).map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("")}</div>
+  </section>
+  <section class="block" id="skills">${head(g(C.skH))}
+    <div class="groups">${C.skills.map(s=>`<div><h3>${g(s.h)}</h3><ul class="chips">${g(s.i).map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("")}</div>
+  </section>
+  <section class="block" id="education">${head(g(C.edH))}
+    <div><div class="edu"><span class="mono">${g(C.edu.d)}</span><h3>${g(C.edu.t)}</h3><p>${C.edu.s}</p><p>${g(C.edu.n)}</p></div>
+    <dl class="langs">${g(C.langs).map(f=>`<div><dt class="mono">${f[0]}</dt><dd>${f[1]}</dd></div>`).join("")}</dl></div>
+  </section>
+  <section class="block" id="certs">${head(g(C.ceH))}
+    <div class="groups">${C.certs.map(s=>`<div><h3>${s.h}<small>${g(s.i).length}</small></h3><ul class="plain">${g(s.i).map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("")}</div>
+  </section>
+  <section class="block" id="contact">${head(g(C.coH))}
+    <div class="contact">${[[g(C.co)[0],EMAIL],[g(C.co)[1],PHONE]].map((r,i)=>`<div class="line"><div><span class="mono">${r[0]}</span><span class="val" id="val-${i}">${r[1]}</span></div><button type="button" class="btn" id="copy-${i}" data-copy="${r[1]}" data-target="val-${i}">${g(C.co)[2]} ⧉</button></div>`).join("")}<div class="line"><div><span class="mono">LinkedIn</span><span class="val">linkedin.com/in/eduardo-hernandez-b5b049384</span></div><a class="btn" href="https://www.linkedin.com/in/eduardo-hernandez-b5b049384" target="_blank" rel="noopener">${L==="es"?"Ver perfil":"View profile"} ↗</a></div></div>
+  </section>`;
+  document.getElementById("foot").innerHTML=`<span>${g(C.foot)}</span><a href="#profile">↑</a>`;
+}
+document.addEventListener("click",e=>{
+  const lb=e.target.closest(".lang button");
+  if(lb){L=lb.dataset.lang;try{localStorage.setItem("cv-lang",L)}catch(e){}render();return}
+  const cb=e.target.closest("[data-copy]");
+  if(cb){
+    const done=()=>{cb.textContent=C.co[L][3]+" ✓";setTimeout(()=>{cb.textContent=C.co[L][2]+" ⧉"},1600)};
+    const sel=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById(cb.dataset.target));const s=getSelection();s.removeAllRanges();s.addRange(r)};
+    try{navigator.clipboard.writeText(cb.dataset.copy).then(done,sel)}catch(err){sel()}
+  }
+});
+render();
+</script>
+</body>
+</html>
